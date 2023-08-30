@@ -1,4 +1,4 @@
-// tienda de mascotas, vende alimento para perros por kilo, el cliente pone cantidad, marca seleccionada y metodo de envio.
+// tienda de mascotas, vende alimento para perros por kilo, el cliente pone cantidad, marca seleccionada, da como resultados valores a pagar y costo de envio calculuado por cantidad de alimento comprado.
 // variables globales
 const alimentoA = 100
 const alimentoB = 200
@@ -11,6 +11,8 @@ function multiplicar(valor1, valor2){
     const resultado = valor1 * valor2;
     return resultado;
 }
+//paso 1: que nos diga por prompt la cantidad de kilos de alimento para mascota que quiere llevar, teniendo en cuenta que 0. cierra el ciclo.
+//paso 2: elija la marca de alimento que desee comprar, con A B y C.
 
 while (cantidad != 0){
     cantidad = parseInt(prompt("Ingresar cantidad de alimentos de comida vendido, recuerde que 0 cero, termina la carga"));
