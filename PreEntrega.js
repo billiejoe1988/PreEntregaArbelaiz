@@ -1,35 +1,33 @@
 // tienda de mascotas, vende alimento para perros por kilo, el cliente pone cantidad, marca seleccionada y metodo de envio.
 // variables globales
-alimentoA = 100
-alimentoB = 200
-alimentoC = 1000
+const alimentoA = 100
+const alimentoB = 200
+const alimentoC = 1000
+
+let cantidad; 
 
 //operacion multiplicar
-function multiplicar(alimento, cantidad){
-    const resultado = alimento * cantidad;
-    return
+function multiplicar(valor1, valor2){
+    const resultado = valor1 * valor2;
+    return resultado;
 }
 
-let cantidad;
-let alimento;
-let marcaAlimento;
-    
 while (cantidad != 0){
-    const cantidad = parseInt(prompt("Ingresar cantidad de alimentos de comida vendido, recuerde que 0 cero, termina la carga"));
-    const marcaAlimento = prompt("Ingrese la marca de alimento que desee: alimentoA - alimentoB - alimentoC");
+    cantidad = parseInt(prompt("Ingresar cantidad de alimentos de comida vendido, recuerde que 0 cero, termina la carga"));
+    marcaAlimento = prompt("Ingrese la marca de alimento que desee:\n\ -Si quiere alimento marca A ingrese = A \n\ -Si quiere alimento marca B ingrese = B \n\ -Si quiere alimento marca C ingrese = C");
      
     switch (marcaAlimento){
-        case "alimentoA":
-           resultado = multiplicar(100, cantidad);
-           alert("Debe abonar $ "+ resultado + "por su compra de alimento marca A");
+        case "A":
+           resultado = multiplicar(alimentoA, cantidad);
+           alert("Debe abonar $ "+ resultado + " por su compra de alimento marca A");
            break;
-        case "alimentoB":
-            resultado = multiplicar(200, cantidad);
-            alert("Debe abonar $ "+ resultado + "por su compra de alimento marca C");
+        case "B":
+            resultado = multiplicar(alimentoB, cantidad);
+            alert("Debe abonar $ "+ resultado + " por su compra de alimento marca B");
             break;
-        case "alimentoC":
-            resultado = multiplicar(100, cantidad);
-            alert("Debe abonar $ "+ resultado + "por su compra de alimento marca C");
+        case "C":
+            resultado = multiplicar(alimentoC, cantidad);
+            alert("Debe abonar $ "+ resultado+ " por su compra de alimento marca C");
             break;
         default:
             alert("operacion invalida");
@@ -37,18 +35,15 @@ while (cantidad != 0){
     }
 
     if (cantidad >= 10 ){
-        const valorEnvio = 0
-        return valorEnvio;
+        valorEnvio = 0
         alert("Su costo de envio es $"+ valorEnvio);
     }
     else if (cantidad >=5 ){
-        const valorEnvio = 100
-        return valorEnvio;
+        valorEnvio = 100
         alert("Su costo de envio es $"+ valorEnvio);
     }
     else {
-        const valorEnvio = 200
-        return valorEnvio;
+        valorEnvio = 200
         alert("su costo de envio es $"+ valorEnvio);
     }
 }
