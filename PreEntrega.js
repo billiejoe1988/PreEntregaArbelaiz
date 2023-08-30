@@ -32,7 +32,7 @@ while (cantidad != 0){
             alert("Debe abonar $ "+ resultado+ " por su compra de alimento marca C");
             break;
         default:
-            alert("operacion invalida");
+            alert("Operacion Invalida");
             break;
     }
 
@@ -46,6 +46,6 @@ while (cantidad != 0){
     }
     else {
         valorEnvio = 200
-        alert("su costo de envio es $"+ valorEnvio);
+        alert("Su costo de envio es $"+ valorEnvio);
     }
 }
