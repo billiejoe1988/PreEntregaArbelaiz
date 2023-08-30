@@ -5,6 +5,8 @@ const alimentoB = 200
 const alimentoC = 1000
 
 let cantidad; 
+let marcaAlimento;
+let resultado;
 
 //operacion multiplicar
 function multiplicar(valor1, valor2){
@@ -16,6 +18,11 @@ function multiplicar(valor1, valor2){
 
 while (cantidad != 0){
     cantidad = parseInt(prompt("Ingresar cantidad de alimentos de comida vendido, recuerde que 0 cero, termina la carga"));
+    
+    if (cantidad === 0){
+        break;
+    }
+
     marcaAlimento = prompt("Ingrese la marca de alimento que desee:\n\ -Si quiere alimento marca A ingrese = A \n\ -Si quiere alimento marca B ingrese = B \n\ -Si quiere alimento marca C ingrese = C");
      
     switch (marcaAlimento){
